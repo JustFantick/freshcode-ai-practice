@@ -38,7 +38,7 @@ const TodoApp = () => {
     <Paper
       elevation={8}
       sx={{
-        p: 3,
+        p: { xs: 2, sm: 3 },
         borderRadius: 3,
         background:
           "linear-gradient(145deg, hsl(210, 20%, 12%) 0%, hsl(210, 25%, 15%) 100%)",
