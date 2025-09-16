@@ -47,6 +47,9 @@ const TodoItem = ({ todo }: TodoItemProps) => {
         }}
       />
       <ListItemText
+        sx={{
+          pr: { xs: 6, sm: 5 },
+        }}
         primary={
           <Typography
             variant="body1"
