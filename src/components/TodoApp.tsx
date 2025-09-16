@@ -25,7 +25,7 @@ const TodoApp = () => {
     }
   };
 
-  const handleKeyPress = (event: React.KeyboardEvent) => {
+  const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === "Enter") {
       handleAddTodo();
     }
@@ -52,7 +52,7 @@ const TodoApp = () => {
             placeholder="Add a new task..."
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            onKeyPress={handleKeyPress}
+            onKeyDown={handleKeyDown}
             variant="outlined"
             sx={{
               "& .MuiOutlinedInput-root": {
