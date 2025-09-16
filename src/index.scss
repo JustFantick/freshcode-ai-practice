@@ -1,0 +1,108 @@
+// Variables
+$font-family-system: system-ui, Avenir, Helvetica, Arial, sans-serif;
+$font-family-primary: "Inter", "Roboto", "Helvetica", "Arial", sans-serif;
+$line-height-base: 1.5;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+
+// Color variables
+$color-primary: #646cff;
+$color-primary-hover: #535bf2;
+$color-primary-hover-light: #747bff;
+
+$color-text-dark: rgba(255, 255, 255, 0.87);
+$color-text-light: #213547;
+
+$color-bg-dark: #242424;
+$color-bg-light: #ffffff;
+$color-bg-button-dark: #1a1a1a;
+$color-bg-button-light: #f9f9f9;
+
+// Mixins
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin button-base {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: $font-weight-medium;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+// Root styles
+:root {
+  font-family: $font-family-system;
+  line-height: $line-height-base;
+  font-weight: $font-weight-normal;
+
+  color-scheme: light dark;
+  color: $color-text-dark;
+  background-color: $color-bg-dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  @include font-smoothing;
+}
+
+// Link styles
+a {
+  font-weight: $font-weight-medium;
+  color: $color-primary;
+  text-decoration: inherit;
+
+  &:hover {
+    color: $color-primary-hover;
+  }
+}
+
+// Body styles
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+// Typography
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+// Button styles
+button {
+  @include button-base;
+  background-color: $color-bg-button-dark;
+
+  &:hover {
+    border-color: $color-primary;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+// Light theme media query
+@media (prefers-color-scheme: light) {
+  :root {
+    color: $color-text-light;
+    background-color: $color-bg-light;
+  }
+
+  a:hover {
+    color: $color-primary-hover-light;
+  }
+
+  button {
+    background-color: $color-bg-button-light;
+  }
+}

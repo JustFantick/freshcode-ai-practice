@@ -1,0 +1,36 @@
+// Variables
+$font-family-primary: "Inter", "Roboto", "Helvetica", "Arial", sans-serif;
+$font-smoothing: antialiased;
+
+// Mixins
+@mixin font-smoothing {
+  -webkit-font-smoothing: $font-smoothing;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin reset-box-model {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Global styles
+* {
+  @include reset-box-model;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include reset-box-model;
+  font-family: $font-family-primary;
+  @include font-smoothing;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  @include reset-box-model;
+}
