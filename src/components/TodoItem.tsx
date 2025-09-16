@@ -1,7 +1,7 @@
 import {
   ListItem,
   ListItemText,
-  ListItemSecondaryAction,
+  Box,
   IconButton,
   Checkbox,
   Typography,
@@ -75,9 +75,15 @@ const TodoItem = ({ todo }: TodoItemProps) => {
           </Typography>
         }
       />
-      <ListItemSecondaryAction>
+      <Box
+        sx={{
+          position: "absolute",
+          right: 16,
+          top: "50%",
+          transform: "translateY(-50%)",
+        }}
+      >
         <IconButton
-          edge="end"
           onClick={handleDelete}
           sx={{
             color: "hsl(0, 50%, 60%)",
@@ -90,7 +96,7 @@ const TodoItem = ({ todo }: TodoItemProps) => {
         >
           <DeleteIcon />
         </IconButton>
-      </ListItemSecondaryAction>
+      </Box>
     </ListItem>
   );
 };
