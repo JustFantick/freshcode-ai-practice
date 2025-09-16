@@ -3,6 +3,10 @@
 A simple responsive and accessible web app made as practice task on "Using AI in developement" course.
 Todo List application built with React, TypeScript, and Material-UI. Features a dark theme with HSL color model and persistent storage using browser's localStorage.
 
+## AI Development History
+
+All AI chat history from the development process has been exported and placed in the `ai-chat-history/` folder.
+
 ## Features
 
 - ✅ **Add Tasks**: Create new tasks with a simple input field
@@ -27,7 +31,7 @@ Todo List application built with React, TypeScript, and Material-UI. Features a 
 
 ### Prerequisites
 
-- Node.js (version 18 or higher)
+- Node.js (version 22.12.0 or higher)
 - npm or yarn package manager
 
 ### Installation
@@ -51,7 +55,7 @@ npm install
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+4. Open your browser and navigate to `http://localhost:5173/freshcode-ai-practice/`
 
 ### Building for Production
 
@@ -75,46 +79,6 @@ npm run build
 
 3. Enable GitHub Pages in your repository settings and set the source to the `docs` folder
 
-## Usage
-
-### Adding Tasks
-
-- Type your task in the input field at the top
-- Press Enter or click the "Add" button to create the task
-
-### Managing Tasks
-
-- **Complete/Uncomplete**: Click the checkbox next to any task
-- **Delete**: Click the delete (trash) icon next to any task
-- **Clear Completed**: Click the "Clear Completed" button to remove all completed tasks at once
-
-### Task Information
-
-- Each task shows its creation date and time
-- Completed tasks are visually distinguished with strikethrough text and reduced opacity
-- Task counters show total and completed task counts
-
-## Project Structure
-
-```
-freshcode-ai-practice/
-├── src/
-│   ├── components/
-│   │   ├── TodoApp.tsx      # Main application component
-│   │   └── TodoItem.tsx     # Individual task component
-│   ├── store/
-│   │   └── todoStore.ts     # Zustand store for state management
-│   ├── App.tsx              # Root component with theme setup
-│   ├── App.scss             # Global styles with SCSS features
-│   ├── index.scss           # Base styles with SCSS variables
-│   └── main.tsx             # Application entry point
-├── docs/                    # Built files for GitHub Pages deployment
-├── public/                  # Static assets
-├── package.json             # Dependencies and scripts
-├── vite.config.ts           # Vite configuration
-└── README.md               # This file
-```
-
 ## Design Features
 
 - **HSL Color Model**: All colors use HSL values for better color manipulation
@@ -124,21 +88,6 @@ freshcode-ai-practice/
 - **Gradient Backgrounds**: Subtle gradients for visual depth
 - **Responsive Layout**: Adapts to different screen sizes
 - **Smooth Animations**: Hover effects and transitions for better UX
-
-## Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ## License
 
