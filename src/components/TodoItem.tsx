@@ -28,8 +28,8 @@ const TodoItem = ({ todo }: TodoItemProps) => {
   return (
     <ListItem
       sx={{
-        py: 2,
-        px: 3,
+        py: { xs: 1, sm: 2 },
+        px: { xs: 0.5, sm: 3 },
         "&:hover": {
           backgroundColor: "hsl(210, 20%, 15%)",
         },
@@ -40,6 +40,7 @@ const TodoItem = ({ todo }: TodoItemProps) => {
         onChange={handleToggle}
         sx={{
           color: "hsl(210, 50%, 50%)",
+          marginRight: "0.75rem",
           "&.Mui-checked": {
             color: "hsl(120, 50%, 50%)",
           },
